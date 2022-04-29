@@ -1,0 +1,175 @@
+/* 返回按钮 */
+.buttonBack {
+        display: flex;
+        align-items: center;
+        height: 32px;
+        position: fixed;
+        left: 25rpx;
+}
+
+.buttonBack>image {
+        transform: translateY(180deg);
+        width: 20px;
+        height: 20px;
+}
+
+/* 选择照片按钮 */
+.chooseButton {
+        background-color: black;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100rpx;
+        left: 430rpx;
+        height: 28px;
+        font-size: 22rpx;
+        border-radius: 100rpx;
+}
+
+/* 照片栏 */
+.allPhoto {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 200rpx;
+}
+
+.allPhoto>view {
+        position: relative;
+        background-color: white;
+        width: 32%;
+        height: 240rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        margin: 0rpx 0rpx 0rpx 9rpx;
+}
+
+.allPhoto>view>view:nth-child(2){
+        position: absolute;
+        background-color: white;
+        width: 240rpx;
+        height: 240rpx;
+        opacity: 0.3;
+        z-index: 2;
+}
+
+/* 视频栏目 */
+.allVlog {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        margin-top: 200rpx;
+}
+
+.allVlog>view{
+        width: 47%;
+        background-color: blue;
+        margin-left: 15rpx;
+        height: 250rpx;
+        position: relative;
+}
+
+
+/* 照片选择圆圈 */
+.plog_chooseRound {
+        position: absolute;
+        width: 50rpx;
+        height: 50rpx;
+        border-radius: 50%;
+        top: 185rpx;
+        left: 180rpx;
+        z-index: 5;
+}
+
+.plog_chooseRound>image {
+        width: 100%;
+        height: 100%;
+}
+
+/* 视频选择圆圈 */
+.vlog_chooseRound {
+        position: absolute;
+        width: 50rpx;
+        height: 50rpx;
+        border-radius: 50%;
+        top: 185rpx;
+        left: 280rpx;
+        z-index: 5;
+}
+
+.vlog_chooseRound>image {
+        width: 100%;
+        height: 100%;
+}
+
+/* 操作栏 */
+.operation {
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 100rpx;
+        font-weight: bolder;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+        font-size: 28rpx;
+}
+
+.operation>view:nth-child(1) {
+        box-sizing: border-box;
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 150rpx;
+        height: 60rpx;
+        margin-left: 30rpx;
+}
+
+/* 全选符号 */
+.operation>view:nth-child(1)>view:nth-child(2) {
+        width: 28rpx;
+        height: 28rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10rpx;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-45%);
+        left: 55rpx;
+}
+
+.operation>view:nth-child(1)>view:nth-child(2)>image {
+        width: 28rpx;
+        height: 28rpx;
+        border-radius: 50%;
+}
+
+/* 照片数量 */
+.operation>view:nth-child(2) {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+}
+
+/* 删除按钮 */
+.operation>view:nth-child(3) {
+        position: absolute;
+        right: 30rpx;
+        top: 50%;
+        transform: translateY(-38%);
+}
+
+.operation>view:nth-child(3)>image {
+        width: 40rpx;
+        height: 40rpx;
+}

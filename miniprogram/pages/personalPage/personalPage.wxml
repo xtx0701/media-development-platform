@@ -1,0 +1,93 @@
+<!-- 返回按钮 -->
+<view class="buttonBack" style="top: {{buttonHeight+2}}px;" bindtap="backIndex">
+        <image src="../../images/Morelogo_white.png"></image>
+</view>
+
+<!-- 背景logo -->
+<view class="index_logo">
+        <image src="../../images/index_logo.jpg" style="width: 100%;margin-left: 15 rpx;" mode="widthFix"></image>
+</view>
+
+<view class="personalMessage">
+        <!-- 用户资料栏 -->
+        <view class="personalMessage_part">
+                <!-- 左侧 -->
+                <view>
+                        <view>{{userInfo.userName}}</view>
+                        <view>{{userLevel}}</view>
+                </view>
+                <!-- 右侧 -->
+                <view>
+                        <image src="{{userInfo.head}}"></image>
+                </view>
+        </view>
+
+
+        <!-- 用户数据 -->
+        <view class="personalMessage_part">
+                <view>
+                        <view>关注</view>
+                        <view>{{userInfo.careNum}}</view>
+                </view>
+
+                <view>
+                        <view>粉丝</view>
+                        <view>{{userInfo.fansNum}}</view>
+                </view>
+
+                <view>
+                        <view>获赞</view>
+                        <view>{{userInfo.clickNum}}</view>
+                </view>
+        </view>
+
+        <!-- 个人展示 -->
+        <!-- 照片墙 -->
+        <view class="photoWall">
+
+                <view class="photoWall_title">
+                        <view>照片墙</view>
+                        <view><text style="padding-right: 5rpx;" bindtap="goDetail" data-type='plog'>查看全部</text>
+                                <image src="../../images/Morelogo.png" style="width: 22rpx;height: 22rpx; transform: rotateY(180deg);" mode="aspectFill"></image>
+                        </view>
+                </view>
+
+                <view class="photoWall_content">
+
+                        <!-- 照片 -->
+                        <view wx:for="{{userInfo.plog}}" wx:key="index" wx:if="{{index<=2}}">
+                                <image src='http://42.194.250.165:8081/shot/{{item}}'></image>
+                        </view>
+
+                        <!-- 发表按钮 -->
+                        <view class="photoWall_button" wx:if="{{userPhotoNum<3}}" bindtap="userUploadPhoto">
+                                <image src="../../images/personal_button.png" style="width: 80rpx;height: 80rpx;"></image>
+                        </view>
+
+                        <!-- 照片数量展示 -->
+                </view>
+        </view>
+        <view class="photoNum" wx:if="{{userPhotoNum>=3}}">
+                <text style="color: white;font-weight: bolder;">+{{userPhotoNum}}</text>
+        </view>
+        <!-- 视频栏 -->
+        <view class="vlogWall">
+                <view class="vlogWall_title">
+                        <view>视频墙</view>
+                        <view><text style="padding-right: 5rpx;" bindtap="goDetail" data-type="vlog">查看全部</text>
+                                <image src="../../images/Morelogo.png" style="width: 22rpx;height: 22rpx;transform: rotateY(180deg);"></image>
+                        </view>
+                </view>
+
+                <!-- 视频内容 -->
+                <view>
+                        <view wx:for="{{userInfo.vlog}}" wx:if="{{index<2}}">
+                                <video src="http://42.194.250.165:8081/shot/{{item}}" binderror="videoErrorCallback" style="width: 100%;height: 100%;"></video>
+                        </view>
+                        <view class="vlogWall_button" bindtap="userUploadVlog" wx:if="{{userVlogNum<2}}">
+                                <image src="../../images/personal_button.png" style="width: 80rpx;height: 80rpx;"></image>
+                        </view>
+                </view>
+
+        </view>
+</view>

@@ -1,0 +1,89 @@
+/* pages/userRelease/userRelease.wxss */
+page {
+        background-color: white;
+}
+
+/* 遮挡层 */
+.cover {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 600;
+}
+
+/* 文本框 */
+.formText {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 92%;
+        min-height: 120rpx;
+        margin-top: 10rpx;
+        font-size: 25rpx;
+}
+
+/* 照片选择区 */
+.photoWall {
+        width: 80%;
+        position: relative;
+        left: 20rpx;
+        display: flex;
+        flex-wrap: wrap;
+}
+
+.photoWall>view {
+        width: 32%;
+        background-color: #f9f9f9;
+        margin: 7rpx 0rpx 0rpx 7rpx;
+        height: 190rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.photoWall>view>image {
+        width: 100%;
+        height: 100%;
+}
+
+.bounced {
+        width: 100%;
+        height: 300rpx;
+        background-color: white;
+        position: absolute;
+        bottom: 0;
+        z-index: 601;
+}
+
+/* 底部操作栏目 */
+.actionBar {
+        display: flex;
+        align-items: center;
+        height: 120rpx;
+        position: fixed;
+        width: 100%;
+        bottom: 0;
+}
+
+.actionBar>view:nth-child(1){
+        width: 30%;
+        background-color: red;
+        height: 90rpx;
+}
+
+/* 发布按钮 */
+.submitButton {
+        width: 65%;
+        height: 90rpx;
+        color: white;
+        background-color: black;
+        border-radius: 40rpx;
+        left: 50%;
+        text-align: center;
+        line-height: 90rpx;
+        font-weight: bolder;
+        margin-left: 18rpx;
+}

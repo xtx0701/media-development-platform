@@ -1,0 +1,451 @@
+/* 首页整体 */
+.index_body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        background-color: #f4f4f4;
+}
+
+/* 侧边栏 */
+.index_leftBar {
+        position: fixed;
+        right: 760rpx;
+        width: 80%;
+        height: 100%;
+        z-index: 99999;
+        background-color: #f4f4f4;
+        transition: all 0.7s ease;
+}
+
+/* 侧边栏弹出动画 */
+.index_leftBar_animation {
+        transform: rotate(0deg) scale(1) translate(100%, 0%)
+}
+
+/* 用户头像栏 */
+.user_photo {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 150rpx;
+        margin-top: 150rpx;
+}
+
+.user_photo>view:nth-child(1)>image {
+        width: 100rpx;
+        height: 100rpx;
+        border-radius: 50%;
+        display: inline-block;
+}
+
+.user_photo>view:nth-child(1) {
+        padding-left: 40rpx;
+}
+
+.user_photo>view:nth-child(2) {
+        display: flex;
+        align-items: center;
+        padding-left: 10rpx;
+        font-size: 22rpx;
+        font-weight: bolder;
+        height: 60rpx;
+}
+
+.user_photo>view:nth-child(2)>image {
+        width: 23rpx;
+        height: 23rpx;
+        margin-top: 5rpx;
+}
+
+/* 用户功能栏 */
+.user_function {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 500rpx;
+        margin-left: 40rpx;
+        font-size: 21rpx;
+        border-radius: 10rpx;
+        margin-top: 10rpx;
+}
+
+.user_function:nth-child(3) {
+        margin-top: 40rpx;
+}
+
+.user_function>view {
+        height: 70rpx;
+        display: flex;
+        align-items: center;
+}
+
+.user_function>view>view {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
+.user_function>view>view:nth-child(1) {
+        margin-left: 10rpx;
+        width: 60rpx;
+}
+
+.user_function>view>view:nth-child(2) {
+        margin-left: 15rpx;
+}
+
+.user_function>view>view:nth-child(3) {
+        flex-grow: 1;
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 20rpx;
+}
+
+.user_function>view>view:nth-child(1)>image {
+        width: 28rpx;
+        height: 28rpx;
+        padding-top: 5rpx;
+}
+
+.user_function>view>view:nth-child(3)>image {
+        width: 20rpx;
+        height: 20rpx;
+        padding-top: 5rpx;
+}
+
+/* 侧边栏logo */
+.leftBar_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        background-color: white;
+        width: 61rpx;
+        height: 61rpx;
+        border-radius: 50%;
+        left: 45rpx;
+        z-index: 1;
+}
+
+.leftBar_button>image {
+        width: 40rpx;
+        height: 40rpx;
+}
+
+/* 遮挡层 */
+.cover {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 60000;
+}
+
+/* 首页logo */
+.index_logo {
+        display: flex;
+        justify-content: center;
+        background-color: black;
+        height: 730rpx;
+}
+
+.index_logo>image {
+        width: 100%;
+        margin: 40rpx 0rpx 0rpx 15rpx;
+}
+
+/* 首页分区 */
+.index_partition {
+        display: flex;
+        justify-content: space-between;
+        width: 660rpx;
+        height: 160rpx;
+        margin: -80rpx 0rpx 0rpx 50rpx;
+
+}
+
+.index_partition_part {
+        width: 200rpx;
+        background-color: white;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+}
+
+.index_partition_part>view:nth-child(1) {
+        height: 120rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+}
+
+.index_partition_part>view:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22rpx;
+        font-weight: bolder;
+}
+
+.index_partition_part>view>image {
+        width: 180rpx;
+        height: 180rpx;
+}
+
+/* 主页个人等级栏 */
+.index_personaldata {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 660rpx;
+        height: 250rpx;
+        margin: 40rpx 0rpx 0rpx 50rpx;
+        background-color: white;
+        border-radius: 20rpx;
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+.index_personaldata_part {
+        border-radius: 10rpx;
+}
+
+.index_personaldata_part:nth-of-type(1) {
+        width: 55%;
+}
+
+/* 左边 */
+.index_personaldata_part:nth-of-type(2) {
+        width: 45%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.index_personaldata_part:nth-child(1)>view:nth-child(1) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100rpx;
+        padding: 10rpx 0rpx 0rpx 20rpx;
+        font-weight: bolder;
+        font-size: 24rpx;
+}
+
+.index_personaldata_part:nth-child(1)>view:nth-child(2) {
+        background-color: white;
+        font-size: 28rpx;
+        font-weight: bolder;
+        padding-left: 20rpx;
+}
+
+.index_personaldata_part:nth-child(1)>view:nth-child(3) {
+        width: 330rpx;
+        margin: 20rpx 0rpx 0rpx 20rpx;
+}
+
+.index_personaldata_part:nth-child(1)>view:nth-child(4) {
+        font-size: 20rpx;
+        font-weight: bolder;
+        padding: 10rpx 0rpx 0rpx 20rpx;
+}
+
+/* 右边 */
+.index_personaldata_part:nth-child(2)>view {
+        background-color: black;
+        height: 190rpx;
+        width: 90%;
+        border-radius: 20rpx;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+        font-size: 40rpx;
+        margin-bottom: 20rpx;
+}
+
+/* 客服按钮 */
+.serviceButton {
+        position: absolute;
+        z-index: 500;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        right: 0;
+        width: 100rpx;
+        height: 100rpx;
+        background-color: white;
+        border-radius: 90rpx 0rpx 0rpx 90rpx;
+}
+
+.serviceButton>image {
+        width: 70rpx;
+        height: 70rpx;
+}
+
+.serviceButton>button {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 100%;
+}
+
+/* 发布按钮 */
+.releaseButton {
+        position: absolute;
+        bottom: 40rpx;
+        left: 50%;
+        height: 150rpx;
+        width: 150rpx;
+        transform: translateX(-50%);
+        z-index: 50000;
+        background-color: black;
+        border-radius: 50%;
+}
+
+.releaseButton>view:nth-child(1) {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        padding-top: 40rpx;
+}
+
+.releaseButton>view:nth-child(1)>image {
+        width: 45rpx;
+        height: 45rpx;
+}
+
+.releaseButton>view:nth-child(2) {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50%;
+        padding-bottom: 30rpx;
+        font-size: 20rpx;
+        font-weight: bolder;
+        color: white;
+}
+
+/* 发布选项 */
+.release {
+        background-color: #f4f4f4;
+        width: 680rpx;
+        height: 430rpx;
+        position: fixed;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 110rpx;
+        z-index: 1000;
+        border-radius: 100rpx 100rpx 0rpx 0rpx;
+        transition: all 0.7s ease;
+        font-size: 18rpx;
+        font-weight: bolder;
+}
+
+.releaseContent {
+        width: 90%;
+        height: 300rpx;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 40rpx 0rpx 0rpx 34rpx;
+}
+
+.releaseContent>view {
+        width: 50%;
+        height: 150rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 15rpx;
+}
+
+.releaseOptions>view {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        width: 95%;
+        height: 90%;
+        border-radius: 15rpx;
+        background-color: white;
+}
+
+/* 第一第三模块样式 */
+.releaseOptions:nth-child(1)>view>view:nth-child(1),
+.releaseOptions:nth-child(3)>view>view:nth-child(1) {
+        width: 32%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.releaseOptions:nth-child(1)>view>view:nth-child(1)>image,
+.releaseOptions:nth-child(3)>view>view:nth-child(1)>image {
+        width:70rpx ;
+        height: 70rpx;
+}
+
+.releaseOptions:nth-child(1)>view>view:nth-child(2),
+.releaseOptions:nth-child(3)>view>view:nth-child(2) {
+        flex: 1;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+}
+
+.releaseOptions:nth-child(1)>view>view:nth-child(2)>view,
+.releaseOptions:nth-child(3)>view>view:nth-child(2)>view {
+        padding: 10rpx;
+}
+
+.releaseOptions:nth-child(1)>view>view:nth-child(2)>view:nth-child(1),
+.releaseOptions:nth-child(3)>view>view:nth-child(2)>view:nth-child(1) {
+        font-size: 40rpx;
+}
+
+/* 第二第四模块样式 */
+.releaseOptions:nth-child(2)>view>view:nth-child(2),
+.releaseOptions:nth-child(4)>view>view:nth-child(2) {
+        width: 32%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.releaseOptions:nth-child(2)>view>view:nth-child(2)>image,
+.releaseOptions:nth-child(4)>view>view:nth-child(2)>image {
+        width:70rpx ;
+        height: 70rpx;
+}
+
+.releaseOptions:nth-child(2)>view>view:nth-child(1),
+.releaseOptions:nth-child(4)>view>view:nth-child(1) {
+        flex: 1;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+}
+
+.releaseOptions:nth-child(2)>view>view:nth-child(1)>view,
+.releaseOptions:nth-child(4)>view>view:nth-child(1)>view {
+        padding: 10rpx;
+}
+
+.releaseOptions:nth-child(2)>view>view:nth-child(1)>view:nth-child(1),
+.releaseOptions:nth-child(4)>view>view:nth-child(1)>view:nth-child(1) {
+        font-size: 40rpx;
+}
+
+
+/* 第二第三模块颜色 */
+.releaseOptions:nth-child(2)>view,
+.releaseOptions:nth-child(3)>view {
+        background-color: black;
+        color: white;
+}

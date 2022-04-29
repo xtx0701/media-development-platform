@@ -1,0 +1,167 @@
+<!-- 侧边栏 -->
+<view class="index_leftBar {{openleftBar?'index_leftBar_animation':''}}">
+        <!-- 用户头像栏 -->
+        <view class="user_photo" bindtap="userLogin" bindtap="userLogin">
+                <view>
+                        <image src="{{hasUserInfo?userInfo.head:'../../images/index_logo.jpg'}}"></image>
+                </view>
+                <view><text decode="true">&nbsp;&nbsp;{{hasUserInfo?userInfo.userName:'请先登陆'}}&nbsp;&nbsp;</text>
+                        <image src="../../images/Morelogo.png" style="transform: rotateY(180deg);"></image>
+                </view>
+        </view>
+        <!-- 侧边栏用户功能 -->
+        <view class="user_function">
+                <view wx:for="{{leftBarClassUser.data}}" wx:key="text">
+                        <view>
+                                <image src="{{item.leftImage}}" style="{{item.ImageStyle}}"></image>
+                        </view>
+                        <view>{{item.text}}</view>
+                        <view>
+                                <image src="{{item.rightImage}}" style="transform: rotateY(180deg);"></image>
+                        </view>
+                </view>
+        </view>
+        <!-- 侧边栏设置 -->
+        <view class="user_function">
+                <view wx:for="{{leftBarClassInstall.data}}" wx:key="text">
+                        <view>
+                                <image src="{{item.leftImage}}" style="{{item.ImageStyle}}"></image>
+                        </view>
+                        <view>{{item.text}}</view>
+                        <view>
+                                <image src="{{item.rightImage}}" style="transform: rotateY(180deg);"></image>
+                        </view>
+                </view>
+
+        </view>
+
+
+</view>
+
+<!-- 侧边栏按钮 -->
+<view class="leftBar_button" style="top: {{buttonHeight}}px;">
+        <image src="../../images/leftBarButton.png" bindtap="openleftBar"></image>
+</view>
+
+<!-- 遮挡层 -->
+<view class="cover" wx:if="{{openleftBar}}" bindtap="closeleftBar"></view>
+
+<!-- 遮挡层 -->
+<view class="cover" bindtap="closeRelease" style="z-index: 100;" wx:if="{{userRelease}}"></view>
+
+<!-- 首页内容 -->
+<view class="index_body">
+        <!-- 首页logo -->
+        <view class="index_logo">
+                <image src="../../images/index_logo.jpg" style="width: 100%;margin-left: 15 rpx;" mode="widthFix"></image>
+        </view>
+
+
+        <!-- 主页分区 -->
+        <view class="index_partition">
+                <view class="index_partition_part">
+                        <view>
+                                <image src="../../images/newcamera.jpg" ></image>
+                        </view>
+                        <view>拍摄</view>
+                </view>
+                <view class="index_partition_part">
+                        <view>
+                                <image src="../../images/newcommunity.jpg" ></image>
+                        </view>
+                        <view>社区</view>
+                </view>
+                <view class="index_partition_part">
+                        <view>
+                                <image src="../../images/newmall.jpg" ></image>
+                        </view>
+                        <view>淘设备</view>
+                </view>
+        </view>
+        <!-- 用户等级展示栏 -->
+        <view class="index_personaldata">
+                <view class="index_personaldata_part">
+                        <view>
+                                <image src="{{hasUserInfo?userInfo.head:'../../images/index_logo.jpg'}}" style="width: 60rpx;height: 60rpx;border-radius: 50%;" />
+                                <text style="margin-left: 20rpx;">{{hasUserInfo?userInfo.userName:'请先登陆'}}</text>
+                        </view>
+
+                        <view>
+                                <text>{{userLevel[0]}}</text>
+                        </view>
+
+                        <view><progress color="#000000" percent="{{levelPercent}}" backgroundColor="#f4f4f4" border-radius="30rpx" stroke-width="8rpx" style="margin-top: 10rpx;"></progress></view>
+
+                        <view><text style="color: #808080;">再获得</text><text>{{userExperience}}点经验</text><text style="color: #808080;">成为{{userLevel[1]}}</text></view>
+                </view>
+
+                <view class="index_personaldata_part">
+                        <view>Bleem</view>
+                </view>
+        </view>
+
+
+        <!-- 客服按钮 -->
+        <view class="serviceButton" style="top:{{buttonTop}}px" bindtouchstart="buttonStart" catchtouchmove="buttonMove">
+                <image src="../../images/index_logo_serviceButton.png"></image>
+                <button open-type="contact" hover-class="none"></button>
+        </view>
+</view>
+
+<!-- 发布按钮 -->
+<view class="releaseButton" bindtap="userRelease">
+        <view>
+                <image src="../../images/tabbar_share.png"></image>
+        </view>
+        <view>发布</view>
+</view>
+
+<!-- 发布选项 -->
+<view class="release" wx:if="{{userRelease}}">
+        <view class="releaseContent">
+                <view class="releaseOptions" bindtap="chooseReleaseContent" data-type-Num="0">
+                        <view>
+                                <view>
+                                        <image src="../../images/index_logo_camera.png"></image>
+                                </view>
+                                <view>
+                                        <view>约拍</view>
+                                        <view>寻找心仪模特/摄影师</view>
+                                </view>
+                        </view>
+                </view>
+                <view class="releaseOptions" bindtap="chooseReleaseContent" data-type-Num="2">
+                        <view>
+                        <view class="reverse">
+                                <view style="display: flex;justify-content: flex-end;">通告</view>
+                                <view style="display: flex;justify-content: flex-end;">寻找优秀演艺人</view>
+                        </view>
+                        <view>
+                                <image src="../../images/cooperation.png"></image>
+                        </view>
+                       </view>
+                </view>
+                <view class="releaseOptions" bindtap="chooseReleaseContent" data-type-Num="1">
+                        <view>
+                                <view>
+                                        <image src="../../images/community.png" style="width: 60rpx;height: 60rpx;"></image>
+                                </view>
+                                <view>
+                                        <view>社区</view>
+                                        <view>分享你的作品/心情</view>
+                                </view>
+                        </view>
+                </view>
+                <view class="releaseOptions" bindtap="chooseReleaseContent" data-type-Num="3">
+                       <view>
+                        <view class="reverse">
+                                <view style="display: flex;justify-content: flex-end;">装备</view>
+                                <view style="display: flex;justify-content: flex-end;">分享你的毒辣眼光</view>
+                        </view>
+                        <view>
+                                <image src="../../images/equipment.png"></image>
+                        </view>
+                       </view>
+                </view>
+        </view>
+</view>

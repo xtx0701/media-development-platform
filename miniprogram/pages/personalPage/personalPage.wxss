@@ -1,0 +1,253 @@
+@import '../index/index.wxss';
+@import '../personalPage/personalPage_Show//personalPage_Show.wxss';
+/* 全页面样式设置 */
+page{
+        background-color: white;
+}
+/* 用户信息展示栏 */
+.personalMessage {
+        background-color: white;
+        position: relative;
+        border-radius: 90rpx 90rpx 0rpx 0rpx;
+        top: -80rpx;
+        width: 750rpx;
+        height: 100%;
+        box-sizing: border-box;
+}
+
+.personalMessage_part:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20rpx;
+}
+
+.personalMessage_part:nth-child(1)>view:nth-child(1) {
+        width: 40%;
+        height: 160rpx;
+}
+
+/* 用户名 */
+.personalMessage_part:nth-child(1)>view:nth-child(1)>view:nth-child(1) {
+        height: 92rpx;
+        font-size: 38rpx;
+        font-weight: bolder;
+        box-sizing: border-box;
+        padding: 30rpx 0rpx 0rpx 65rpx;
+}
+
+/* 等级标签 */
+.personalMessage_part:nth-child(1)>view:nth-child(1)>view:nth-child(2) {
+        box-sizing: border-box;
+        margin-left: 60rpx;
+        width: 150rpx;
+        height: 50rpx;
+        border-radius: 30rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+        font-size: 20rpx;
+        font-weight: bolder;
+}
+
+/* 头像 */
+.personalMessage_part:nth-child(1)>view:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+}
+
+.personalMessage_part:nth-child(1)>view:nth-child(2)>image {
+        width: 140rpx;
+        height: 140rpx;
+        border-radius: 50%;
+}
+
+.personalMessage_part:nth-child(2) {
+        margin-top: 80rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bolder;
+}
+
+.personalMessage_part:nth-child(2)>view {
+        height: 40rpx;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30%;
+}
+
+.personalMessage_part:nth-child(2)>view:nth-child(1),
+.personalMessage_part:nth-child(2)>view:nth-child(2) {
+        border-right: 3rpx solid grey;
+}
+
+.personalMessage_part:nth-child(2)>view>view {
+        position: relative;
+}
+
+.personalMessage_part:nth-child(2)>view>view:nth-child(1) {
+        bottom: 12rpx;
+        font-size: 20rpx;
+}
+
+.personalMessage_part:nth-child(2)>view>view:nth-child(2) {
+        top: 12rpx;
+        font-size: 35rpx;
+}
+
+/* 照片展示栏 */
+.photoWall {
+        position: relative;
+        background-color: #f4f4f4;
+        border-radius: 20rpx;
+        width: 650rpx;
+        margin: 80rpx 0rpx 0rpx 50%;
+        transform: translateX(-50%);
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* 标题栏 */
+.photoWall_title {
+        height: 70rpx;
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+}
+
+.photoWall_title>view {
+        border-radius: 20rpx;
+        box-sizing: border-box;
+}
+
+.photoWall_title>view:nth-child(1) {
+        display: flex;
+        align-items: center;
+        font-size: 30rpx;
+        height: 100%;
+        width: 500rpx;
+        padding-left: 15rpx;
+}
+
+.photoWall_title>view:nth-child(2) {
+        font-size: 22rpx;
+        height: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 10rpx;
+}
+
+/* 照片内容 */
+.photoWall_content {
+        height: 180rpx;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 0rpx 11rpx 10rpx 5rpx;
+}
+
+.photoWall_content>view {
+        margin-left: 8rpx;
+        width: 32%;
+        background-color: white;
+}
+
+.photoWall_content>view>image {
+        width: 100%;
+        height: 100%;
+}
+
+.photoWall_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+/* 照片数量展示 */
+.photoNum {
+        width: 200rpx;
+        height: 180rpx;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50rpx;
+        background-color: rgb(0, 0, 0, 0.4);
+        position: absolute;
+        top: 450rpx;
+        left: 486rpx;
+}
+
+/* 视频展示栏 */
+.vlogWall{
+        background-color: #f4f4f4;
+        border-radius: 20rpx;
+        width: 650rpx;
+        margin: 40rpx 0rpx 0rpx 50%;
+        transform: translateX(-50%);
+        box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* 标题栏 */
+.vlogWall_title {
+        height: 70rpx;
+        display: flex;
+        align-items: center;
+        font-weight: bolder;
+}
+
+.vlogWall_title>view {
+        border-radius: 20rpx;
+        box-sizing: border-box;
+}
+
+.vlogWall_title>view:nth-child(1) {
+        display: flex;
+        align-items: center;
+        font-size: 30rpx;
+        height: 100%;
+        width: 500rpx;
+        padding-left: 15rpx;
+}
+
+.vlogWall_title>view:nth-child(2) {
+        font-size: 22rpx;
+        height: 100%;
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 10rpx;
+}
+
+/* 视频内容 */
+.vlogWall>view:nth-child(2){
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+}
+
+.vlogWall>view:nth-child(2)>view{
+        width: 90%;
+        height: 280rpx;
+        background-color: white;
+        margin: 10rpx 0rpx 20rpx 33rpx;
+}
+
+.vlogWall>view:nth-child(2)>view:nth-child(1){
+        margin: 10rpx 0rpx 10rpx 33rpx;
+}
+
+/* 视频发布按钮 */
+.vlogWall_button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}

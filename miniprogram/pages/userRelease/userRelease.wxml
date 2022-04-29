@@ -1,0 +1,26 @@
+<!--pages/userRelease/userRelease.wxml-->
+<view>
+        <view>
+                <textarea name="text" class="formText" auto-height="true" placeholder="说点什么" bindinput="saveInput"></textarea>
+        </view>
+        <view class="photoWall">
+                <view wx:for="{{contentArr}}">
+                        <image src="{{item}}"></image>
+                </view>
+                <view bindtap="chooseContent">
+                        <image src="../../images/personal_button.png" style="width: 80rpx;height: 80rpx;"></image>
+                </view>
+        </view>
+
+        <view class="positioning">
+
+        </view>
+        <view class="actionBar">
+                <view>
+                <view><image></image></view>
+                <view>存入草稿箱</view>
+                </view>
+                <view class="submitButton" bindtap="formSubmit">发布</view>
+        </view>
+        <!-- <view bindtap="formSubmit" class="submitButton">提交</view> -->
+</view>
